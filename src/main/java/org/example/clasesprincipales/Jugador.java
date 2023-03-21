@@ -1,4 +1,6 @@
-package org.example;
+package org.example.clasesprincipales;
+
+import org.example.subclases.Equipos;
 
 public class Jugador {
     private long id;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.subclases;
 
 public class Equipos {
     private int id;
