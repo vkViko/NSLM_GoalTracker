@@ -2,22 +2,22 @@ package org.example.subclases;
 
 import java.util.ArrayList;
 
-public class Standings extends Tabla {
+public class Standings extends Table {
 
-    ArrayList<Tabla> table;
+    ArrayList<Table> table;
 
     public Standings() {
     }
 
-    public Standings(ArrayList<Tabla> table) {
+    public Standings(ArrayList<Table> table) {
         this.table = table;
     }
 
-    public ArrayList<Tabla> getTable() {
+    public ArrayList<Table> getTable() {
         return table;
     }
 
-    public void setTable(ArrayList<Tabla> table) {
+    public void setTable(ArrayList<Table> table) {
         this.table = table;
     }
 
@@ -33,10 +33,10 @@ public class Standings extends Tabla {
     public String toString() {
         String datosArray = "";
 
-        for (Tabla elemento: table) {
+        for (Table elemento: table) {
             datosArray += elemento + ", ";
         }
 
-        return limpia(datosArray) + "\n";
+        return "\t" + limpia(datosArray) + "\n";
     }
 }

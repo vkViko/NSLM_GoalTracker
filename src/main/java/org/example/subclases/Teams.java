@@ -1,17 +1,17 @@
 package org.example.subclases;
 
-public class Equipos {
+public class Teams {
     private int id;
     private String name;
     private String crest;
 
-    public Equipos(int id, String name, String crest) {
+    public Teams(int id, String name, String crest) {
         this.id = id;
         this.name = name;
         this.crest = crest;
     }
 
-    public Equipos() {
+    public Teams() {
     }
 
     public int getId() {

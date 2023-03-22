@@ -1,18 +1,16 @@
 package org.example.clasesprincipales;
 
 import org.example.subclases.Standings;
-import org.example.subclases.Tabla;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Clasificacion extends Standings {
+public class MainTable extends Standings {
     ArrayList<Standings> standings;
 
 
-    public Clasificacion() {}
+    public MainTable() {}
 
-    public Clasificacion(ArrayList<Standings> standings) {
+    public MainTable(ArrayList<Standings> standings) {
         this.standings = standings;
     }
 

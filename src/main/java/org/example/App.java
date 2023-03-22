@@ -1,8 +1,10 @@
 package org.example;
 
 import com.google.gson.Gson;
-import org.example.clasesprincipales.Clasificacion;
-import org.example.clasesprincipales.Jugador;
+import org.example.clasesprincipales.MainTable;
+import org.example.clasesprincipales.Match;
+import org.example.subclases.Matches;
+import org.example.clasesprincipales.Player;
 
 import java.io.IOException;
 import java.net.URI;
@@ -32,7 +34,7 @@ public class App {
 
             Gson gson = new Gson();
 
-            Jugador jugador = gson.fromJson(response.body(), Jugador.class);
+            Player jugador = gson.fromJson(response.body(), Player.class);
             System.out.println(jugador);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -55,9 +57,35 @@ public class App {
 
             Gson gson = new Gson();
 
-            Clasificacion clasificacion = gson.fromJson(response.body(), Clasificacion.class);
+            MainTable clasificacion = gson.fromJson(response.body(), MainTable.class);
 
-            System.out.println(clasificacion.getStandings().get(0));
+            System.out.println(clasificacion.getStandings().get(0).getTable().get(19)); //SACA LA PRIMERA POSICION DE LA CLASIFICACION (0-19)
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println();
+
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("http://api.football-data.org/v4/competitions/PL/matches?matchday=2"))
+                    .header("X-Auth-Token", token)
+                    .header("X-Unfold-Goals", "true")
+                    .build();
+
+            HttpResponse<String> response;
+
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            Gson gson = new Gson();
+            Match match = gson.fromJson(response.body(), Match.class);
+
+            System.out.println(match);
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {

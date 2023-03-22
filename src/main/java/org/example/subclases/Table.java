@@ -1,8 +1,8 @@
 package org.example.subclases;
 
-public class Tabla {
+public class Table {
     int position;
-    Equipos team;
+    Teams team;
     String form;
     int won, draw, lost;
     int points;
@@ -10,10 +10,10 @@ public class Tabla {
     int goalsAgainst;
     int goalDifference;
 
-    public Tabla() {
+    public Table() {
     }
 
-    public Tabla(int position, Equipos team, String form, int won, int draw, int lost, int points, int goalsFor, int goalsAgainst, int goalDifference) {
+    public Table(int position, Teams team, String form, int won, int draw, int lost, int points, int goalsFor, int goalsAgainst, int goalDifference) {
         this.position = position;
         this.team = team;
         this.form = form;
@@ -34,11 +34,11 @@ public class Tabla {
         this.position = position;
     }
 
-    public Equipos getTeam() {
+    public Teams getTeam() {
         return team;
     }
 
-    public void setTeam(Equipos team) {
+    public void setTeam(Teams team) {
         this.team = team;
     }
 
@@ -109,7 +109,7 @@ public class Tabla {
     @Override
     public String toString() {
 
-        return position + "- "
+        return "\t" + position + "- "
                 + team.getName() + " - "
                 + won + " - "
                 + draw + " - "

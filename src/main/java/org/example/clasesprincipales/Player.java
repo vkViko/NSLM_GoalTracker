@@ -1,20 +1,20 @@
 package org.example.clasesprincipales;
 
-import org.example.subclases.Equipos;
+import org.example.subclases.Teams;
 
-public class Jugador {
+public class Player {
     private long id;
     private String name;
     private String dateOfBirth;
     private String nationality;
     private String position;
     private int shirtNumber;
-    private Equipos currentTeam;
+    private Teams currentTeam;
 
-    public Jugador() {
+    public Player() {
     }
 
-    public Jugador(String name, String dateOfBirth, String nationality, String position, int shirtNumber, Equipos currentTeam) {
+    public Player(String name, String dateOfBirth, String nationality, String position, int shirtNumber, Teams currentTeam) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.nationality = nationality;
@@ -71,11 +71,11 @@ public class Jugador {
         this.shirtNumber = shirtNumber;
     }
 
-    public Equipos getCurrentTeam() {
+    public Teams getCurrentTeam() {
         return currentTeam;
     }
 
-    public void setCurrentTeam(Equipos currentTeam) {
+    public void setCurrentTeam(Teams currentTeam) {
         this.currentTeam = currentTeam;
     }
 
