@@ -109,7 +109,7 @@ public class Table {
     @Override
     public String toString() {
 
-        return "\t" + position + "- "
+        return "" + position + "- "
                 + team.getName() + " - "
                 + won + " - "
                 + draw + " - "

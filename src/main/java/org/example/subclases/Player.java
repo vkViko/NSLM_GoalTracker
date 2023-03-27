@@ -1,4 +1,4 @@
-package org.example.clasesprincipales;
+package org.example.subclases;
 
 import org.example.subclases.Teams;
 

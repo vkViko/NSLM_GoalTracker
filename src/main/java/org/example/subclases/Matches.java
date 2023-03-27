@@ -69,9 +69,13 @@ public class Matches {
 
     @Override
     public String toString() {
-        return "\n\n" + status.toUpperCase() + "\n"
-                + homeTeam + " " + score + " " + awayTeam + "\n"
-                + "Arbitro: " + referees;
-
+        if (referees.size()==0){
+            return "\n\n" + status.toUpperCase() + "\n"
+                    + homeTeam + " - " + awayTeam;
+        } else {
+            return "\n\n" + status.toUpperCase() + "\n"
+                    + homeTeam + " " + score + " " + awayTeam + "\n"
+                    + "Arbitro: " + referees;
+        }
     }
 }
